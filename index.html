@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Sign Up</title>
 </head>
 <body>
@@ -19,8 +20,9 @@
             Did you like something you saw?<br>
             You have an awesome idea that you want to bring out from the shadows 
             of imagination to the light of screens?<br>
-            Fill the form below. Get in contact with me. Let's get the innovative 
-            spirit of your idea to materilaize!
+            Fill the form below. Register with us. <br>
+            <br>
+            Let's get the innovative spirit of your idea to materilaize!
         </p>
         <form action="#" method="post">
             <div class="input-container">
@@ -29,34 +31,34 @@
                 </h2>
                 <div>
                     <label for="fname">FIRST NAME</label>
-                     <input type="text" name="fname" id="fname">
+                     <input type="text" name="fname" id="fname" minlength="2" pattern="([A-z]{2,})" required>
                 </div>
                 <div>
                     <label for="lname">LAST NAME</label>
-                     <input type="text" name="lname" id="lname">
+                     <input type="text" name="lname" id="lname" minlength="2" pattern="([A-z]{2,})" required>
                 </div>
                 <div>
                     <label for="email">EMAIL</label>
-                     <input type="email" name="email" id="email">
+                     <input type="email" name="email" id="email" minlength="11" required>
                 </div>
                 <div>
                     <label for="pnumber">PHONE NUMBER</label>
-                     <input type="number" name="pnumber" id="pnumber">
+                     <input type="number" name="pnumber" id="pnumber" pattern="(^[\+]\d{7,})">
                 </div>
                 <div>
                     <label for="fname">PASSWORD</label>
-                     <input type="password" name="pword" id="pword">
+                     <input type="password" name="pword" id="pword" minlength="8" required>
                 </div>
                 <div>
-                    <label for="cword   ">CONFIRM PASSWORD</label>
-                     <input type="password" name="cword" id="cword">
+                    <label for="cword">CONFIRM PASSWORD</label>
+                     <input type="password" name="cword" id="cword" required>
                 </div>
             </div>
             <button type="submit">Register</button>
             
         </form>
-        <p class="old-client">Already registered? get in touch 
-            <a href="mailto:amgadsa@outlook.com">here</a>
+        <p class="old-client">Already registered? Get in touch 
+            <a href="mailto:amgadsa@outlook.com">here</a>.
         </p>
     </div>
 </body>
