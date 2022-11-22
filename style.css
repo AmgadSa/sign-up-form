@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: Ubuntu;
+    transition: all ease 0.1s;
 }
 :root{
     font-size: calc(6px + .5vw);
@@ -21,7 +22,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-image: url(banner.jpg);
-    background-size: auto 100%;
+    background-size: cover;
     background-position-x:40%;
 }
 .title{
@@ -81,8 +82,9 @@ body {
     gap:3px
 }
 input{
-    width: 80%;
+    width: 100%;
     padding: .5rem .5rem;
+    flex: 1 1 auto;
     font-size: 1rem;
     border-radius: 3px;
     border:#420b8e80 solid 1px ;
@@ -114,4 +116,36 @@ button{
 }
 button:hover{
     cursor: pointer;
+}
+@media (max-width: 965px) {
+    :root{
+        font-size: calc(16px + 0.1vw);
+    }
+    body{
+        flex-direction: column;
+    }
+    .banner{
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        justify-content: center;
+        align-content: flex-end;
+    }
+    .title{
+        font-size: 12vh;
+        margin: auto 0;
+    }
+    .container{
+        padding: 2rem 0;
+    }
+    .container > * {
+        padding: 0 calc(15% - 2rem) ;
+    }
+    .container > form > .input-container{
+        padding: 2rem calc(15% - 2rem);
+    }
+    button {
+        margin-left: calc(15% - 2rem);
+    }
 }
